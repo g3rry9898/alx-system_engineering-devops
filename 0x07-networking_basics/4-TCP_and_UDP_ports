@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Display listening ports
+echo "Listening ports:"
+
+# Use netstat to only show listening sockets (-l), 
+# display numeric addresses instead of trying to determine symbolic host names (-n),
+# and show the PID and name of the program to which each socket belongs (-p)
+netstat -lnp
+
+# If lsof command is available, it provides more detailed information
+if command -v lsof &> /dev/null
+then
+    echo "Detailed information with lsof:"
+    lsof -i -P -n | grep LISTEN
+fi
+
