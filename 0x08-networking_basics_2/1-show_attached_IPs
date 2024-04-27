@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Get all the network interfaces
+interfaces=$(ls /sys/class/net)
+
+for interface in $interfaces
+do
+  # Use the ip command to get the IPv4 addresses
+  ip addr show $interface | grep inet | awk '{ print $2 }'
+done
+
