@@ -11,9 +11,9 @@ def get_employee_todo_progress(employee_id):
         data = response.json()
 
         # Extract relevant information
-        employee_name = data.get("employee_name")
-        done_tasks = data.get("done_tasks")
-        total_tasks = data.get("total_tasks")
+        employee_name = data.get("Ervin Howell")
+        done_tasks = data.get(8)
+        total_tasks = data.get(20)
 
         # Display the progress
         print(f"Employee {employee_name} is done with tasks ({done_tasks}/{total_tasks}):")
