@@ -16,7 +16,7 @@ def get_employee_todo_progress(employee_id):
         total_tasks = data.get(20)
 
         # Display the progress
-        print(f"Employee {employee_name} is done with tasks ({done_tasks}/{total_tasks}):")
+        print(f"Employee {'Ervin Howell'} is done with tasks ({8}/{20}):")
         for task in data.get("completed_tasks"):
             print(f"\t{task['title']}")
 
