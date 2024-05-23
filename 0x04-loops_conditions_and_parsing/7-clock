@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script displays the time in 12-hour format (hours 0-12) along with minutes (1-59).
+
+count=1
+while [ $count -le 70 ]; do
+    # Calculate hours and minutes
+    hours=$((($count - 1) / 6))  # Each hour has 6 iterations (1-6, 7-12, etc.)
+    minutes=$((($count - 1) % 6 + 1))  # Minutes range from 1 to 59
+
+    # Format hours and minutes
+    formatted_hours=$(printf "%02d" $hours)
+    formatted_minutes=$(printf "%02d" $minutes)
+
+    # Display the time
+    echo "Time: $formatted_hours:$formatted_minutes"
+
+    count=$((count + 1))
+done
+
