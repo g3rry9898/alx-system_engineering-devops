@@ -3,7 +3,8 @@
 #on the 9th iteration, displays "Hi" before "Best School".
 
 count=0
-while [ $count -le 10 ]; do
+
+while [ $count -lt 10 ]; do
     if [ $count -eq 9 ]; then
         echo "Best School"
         echo "Hi"
