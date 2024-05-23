@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Read the Apache access log file and extract IP and status code
+awk '{print $1, $9}' apache-access.log |
+    sort | uniq -c | sort -nr |
+    awk '{print $1, $2, $3}'
+
