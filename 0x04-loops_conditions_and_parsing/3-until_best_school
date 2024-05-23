@@ -6,4 +6,3 @@ until [ $i -ge 10 ]; do
     echo "Best School"
     ((i++))
 done
-
